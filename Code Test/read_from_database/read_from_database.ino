@@ -23,7 +23,7 @@ unsigned long readDataPrevMillis = 0;
 bool firebaseConnected = false;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   // Connect to Wi-Fi
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -86,4 +86,7 @@ void readDataFromFirebase() {
   } else {
     Serial.println("Failed to read Voltage: " + fbdo.errorReason());
   }
+
+
+  
 }
